@@ -79,14 +79,14 @@ int parallel_sum(void *arg)
     } 
 }
 
+
 int main(){
     float test[] = {5, 4, 5, 3, 5, 2, 1, 2};
     int size = 8;
-    double store;
-    double *result = &store;
+    double result;
 
-    sum(test, size, result);
-    printf("result: %f\n", store);
+    sum(test, size, &result);
+    printf("result: %f\n", result);
 
     return 0;
 }
